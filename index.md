@@ -13,12 +13,13 @@
 //  return "在 " + " 的本地時間是 " + nd.toLocaleString();
 //}
 
-function callfinal(){
-  document.getElementById('tesuto').innerHTML = calcTime('taipei' , 8);
-  var date_taipei = DateTimezone(8);
-  document.getElementById('tesuto2').innerHTML = date_taipei.toLocaleString();
-}
--->
+//function callfinal(){
+//  document.getElementById('tesuto').innerHTML = calcTime('taipei' , 8);
+//  var date_taipei = DateTimezone(8);
+//  document.getElementById('tesuto2').innerHTML = date_taipei.toLocaleString();
+//}
+
+
 
 function ShowTime(){
   
