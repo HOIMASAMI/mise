@@ -14,11 +14,11 @@ function ShowTime(){
   
    if ( h >= 19 ) {
     document.getElementById('eigyou').innerHTML = '關店中';
-  } else if ( (h < 19) && (h >= 16) ) {
+  } else if ( ((h < 19) && (h >= 16)) ) {
     document.getElementById('eigyou').innerHTML = '開店中';
-  } else if ( (h < 16) && (h >= 14) ) {
+  } else if ( ((h < 16) && (h >= 14)) ) {
     document.getElementById('eigyou').innerHTML = '關店中';
-  } else if ( (h < 14) && (h >= 11) ) {
+  } else if ( ((h < 14) && (h >= 11)) ) {
     document.getElementById('eigyou').innerHTML = '開店中';
   }
   setTimeout('ShowTime()',1000);
