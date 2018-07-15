@@ -1,37 +1,29 @@
 <script language="JavaScript">
   
  function DateTimezone(offset) {
-
     // 建立現在時間的物件
     d = new Date();
-    
     // 取得 UTC time
     utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-
     // 新增不同時區的日期資料
     return new Date(utc + (3600000*offset));
-
 }
 
 // 計算當地時區的時間
 function calcTime(city, offset) {
-
     // 建立現在時間的物件
-    d = new Date();
-
+  d = new Date();
     // 取得 UTC time
-    utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-
+  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
     // 新增不同時區的日期資料
-    nd = new Date(utc + (3600000*offset));
-
+  nd = new Date(utc + (3600000*offset));
     // 顯示當地時間
-    return "在 " + city + " 的本地時間是 " + nd.toLocaleString();
+  return "在 " + city + " 的本地時間是 " + nd.toLocaleString();
+    
+  document.getElementById('tesuto').innerHTML = calcTime('taipei' , 8);
+  var date_taipei = DateTimezone(8);
+  document.getElementById('tesuto').innerHTML = date_taipei.toLocaleString();
 }
-
-document.getElementById('tesuto').innerHTML = calcTime('taipei' , 8);
-var date_taipei = DateTimezone(8);
-document.getElementById('tesuto').innerHTML = date_taipei.toLocaleString();
   
   
   
@@ -52,6 +44,7 @@ function ShowTime(){
   
 }
 </script>
+<body onload="calcTime('taipei', 8)">
 <div id="tesuto"></div>
 <body onload="ShowTime()">
 <div id="showbox"></div>
