@@ -25,16 +25,7 @@ function ShowTime(){
 }
 </script>
 
-<script type="text/javascript" language="javascript" src="js/jquery-1.4.3.js"></script>
-<script type="text/javascript" language="javascript">
 
-    $.get('\\raw.githubusercontent.com/HOIMASAMI/mise/master/yasumi', function(data) {
-
-            alert(data);
-
-    });
-
-</script>
 
 <body onload="ShowTime()">
 <div id="showbox"></div>
