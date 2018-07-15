@@ -1,15 +1,22 @@
 <script language="JavaScript">
 function ShowTime(){
-　document.getElementById('showbox').innerHTML = new Date();
+　var NowDate=new Date();
+　var h=NowDate.getHours();
+　var m=NowDate.getMinutes();
+　var s=NowDate.getSeconds();　
+　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
 　setTimeout('ShowTime()',1000);
 }
 </script>
 <body onload="ShowTime()">
 <div id="showbox"></div>
 </body>
+
+<br><br/>
+<br><br/>
 <br><br/>
 
-
+<!--
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/HOIMASAMI/mise/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
@@ -47,3 +54,5 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+-->
