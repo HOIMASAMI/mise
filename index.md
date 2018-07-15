@@ -23,11 +23,11 @@
 
 function ShowTime(){
   
-//　var d=new Date();
-//  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-//  var NowDate=new Date(utc + (3600000*8));
+　var d=new Date();
+  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+  var NowDate=new Date(utc + (3600000*8));
 
-  var NowDate=new Date();
+//  var NowDate=new Date();
   
 　var h=NowDate.getHours();
 　var m=NowDate.getMinutes();
