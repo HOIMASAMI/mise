@@ -44,14 +44,6 @@ function ShowTime(){
 }
 </script>
 
-<body onload="callfinal()">
-<div id="tesuto"></div>
-<div id="tesuto2"></div>
-<br><br/>
-<br><br/>
-<br><br/>
-</body>
-
 <body onload="ShowTime()">
 <div id="showbox"></div>
 <div id="eigyou"></div>
