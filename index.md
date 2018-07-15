@@ -44,10 +44,12 @@ function ShowTime(){
   
 }
 </script>
-<body onload="ShowTime()">
+<body>
 <img onload="calcTime('taipei', 8)></img>
 <div id="tesuto"></div>
 <div id="tesuto2"></div>
+</body>
+<body onload="ShowTime()">
 <div id="showbox"></div>
 <div id="eigyou"></div>
 </body>
