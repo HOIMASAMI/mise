@@ -22,7 +22,7 @@ function calcTime(city, offset) {
     
   document.getElementById('tesuto').innerHTML = calcTime('taipei' , 8);
   var date_taipei = DateTimezone(8);
-  document.getElementById('tesuto').innerHTML = date_taipei.toLocaleString();
+  document.getElementById('tesuto2').innerHTML = date_taipei.toLocaleString();
 }
   
   
@@ -47,6 +47,7 @@ function ShowTime(){
 <body onload="ShowTime()">
 <p onload="calcTime('taipei', 8)></p>
 <div id="tesuto"></div>
+<div id="tesuto2"></div>
 <div id="showbox"></div>
 <div id="eigyou"></div>
 </body>
