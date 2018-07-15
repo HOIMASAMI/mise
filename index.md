@@ -1,3 +1,15 @@
+<script language="JavaScript">
+function ShowTime(){
+　document.getElementById('showbox').innerHTML = new Date();
+　setTimeout('ShowTime()',1000);
+}
+</script>
+<body onload="ShowTime()">
+<div id="showbox"></div>
+</body>
+
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/HOIMASAMI/mise/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
