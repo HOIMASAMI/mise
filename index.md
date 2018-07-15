@@ -12,7 +12,7 @@ function ShowTime(){
 　var s=NowDate.getSeconds();　
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
   
-   if ( h >= 19 ) {
+   if ( ((h < 11) && (h >= 19)) ) {
     document.getElementById('eigyou').innerHTML = '關店中';
   } else if ( ((h < 19) && (h >= 16)) ) {
     document.getElementById('eigyou').innerHTML = '開店中';
