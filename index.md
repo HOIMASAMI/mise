@@ -3,7 +3,7 @@
 function checkfile(){
         var myObject;
         myObject = new ActiveXObject("Scripting.FileSystemObject");
-        if(myObject.FileExists("\yasumi.txt")){
+        if(myObject.FileExists("yasumi.txt")){
            document.getElementById('sonzai').innerHTML = 'ない';
         } else {
            document.getElementById('sonzai').innerHTML = 'ある';
