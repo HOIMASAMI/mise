@@ -1,15 +1,5 @@
 <script language="JavaScript">
 
-function checkfile(){
-        var myObject;
-        myObject = new ActiveXObject("Scripting.FileSystemObject");
-        if(myObject.FileExists("https://raw.githubusercontent.com/HOIMASAMI/mise/master/yasumi.txt.txt")){
-           document.getElementById('sonzai').innerHTML = 'ない';
-        } else {
-           document.getElementById('sonzai').innerHTML = 'ある';
-        }
-}
-
 function ShowTime(){
   
 　var d=new Date();
@@ -33,6 +23,17 @@ function ShowTime(){
   }
   setTimeout('ShowTime()',1000);
 }
+</script>
+
+<script type="text/javascript" language="javascript" src="js/jquery-1.4.3.js"></script>
+<script type="text/javascript" language="javascript">
+
+    $.get('yasumi', function(data) {
+
+            alert(data);
+
+    });
+
 </script>
 
 <body onload="ShowTime()">
