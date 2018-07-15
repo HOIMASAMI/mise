@@ -19,13 +19,13 @@ function calcTime(city, offset) {
   nd = new Date(utc + (3600000*offset));
     // 顯示當地時間
   return "在 " + city + " 的本地時間是 " + nd.toLocaleString();
-    
+}
+
+function callfinal(){
   document.getElementById('tesuto').innerHTML = calcTime('taipei' , 8);
   var date_taipei = DateTimezone(8);
   document.getElementById('tesuto2').innerHTML = date_taipei.toLocaleString();
 }
-
-
 
 
 function ShowTime(){
@@ -46,7 +46,7 @@ function ShowTime(){
 }
 </script>
 
-<body onload="calcTime('taipei', 8)">
+<body onload="callfinal()">
 <div id="tesuto"></div>
 <div id="tesuto2"></div>
 <br><br/>
