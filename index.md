@@ -1,17 +1,17 @@
 <script language="JavaScript">
 
-<!--
+
 // 計算當地時區的時間
-function calcTime(offset) {
+//function calcTime(offset) {
     // 建立現在時間的物件
-  d = new Date();
+//  d = new Date();
     // 取得 UTC time
-  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+//  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
     // 新增不同時區的日期資料
-  nd = new Date(utc + (3600000*offset));
+//  nd = new Date(utc + (3600000*offset));
     // 顯示當地時間
-  return "在 " + " 的本地時間是 " + nd.toLocaleString();
-}
+//  return "在 " + " 的本地時間是 " + nd.toLocaleString();
+//}
 
 function callfinal(){
   document.getElementById('tesuto').innerHTML = calcTime('taipei' , 8);
