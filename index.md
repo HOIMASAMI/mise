@@ -7,7 +7,7 @@ function ShowTime(){
 <body onload="ShowTime()">
 <div id="showbox"></div>
 </body>
-<b><b/>
+<br><br/>
 
 
 ## Welcome to GitHub Pages
