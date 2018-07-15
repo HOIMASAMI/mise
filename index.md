@@ -44,9 +44,8 @@ function ShowTime(){
   
 }
 </script>
-<body onload="calcTime('taipei', 8)">
+<body onload="ShowTime()" onload="calcTime('taipei', 8)">
 <div id="tesuto"></div>
-<body onload="ShowTime()">
 <div id="showbox"></div>
 <div id="eigyou"></div>
 </body>
