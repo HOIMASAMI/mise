@@ -1,5 +1,15 @@
 <script language="JavaScript">
-    
+
+function checkfile(){
+        var myObject;
+        myObject = new ActiveXObject("Scripting.FileSystemObject");
+        if(myObject.FileExists("/yasumi.txt")){
+           document.getElementById('sonzai').innerHTML = 'ない';
+        } else {
+           document.getElementById('sonzai').innerHTML = 'ある';
+        }
+}
+
 function ShowTime(){
   
 　var d=new Date();
@@ -28,6 +38,10 @@ function ShowTime(){
 <body onload="ShowTime()">
 <div id="showbox"></div>
 <div id="eigyou"></div>
+</body>
+
+<body onload="checkfile()">
+<div id="sonzai"></div>
 </body>
 
 <br><br/>
