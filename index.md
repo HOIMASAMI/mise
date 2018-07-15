@@ -28,7 +28,7 @@ function ShowTime(){
 <script type="text/javascript" language="javascript" src="js/jquery-1.4.3.js"></script>
 <script type="text/javascript" language="javascript">
 
-    $.get('yasumi', function(data) {
+    $.get('https://raw.githubusercontent.com/HOIMASAMI/mise/master/yasumi', function(data) {
 
             alert(data);
 
