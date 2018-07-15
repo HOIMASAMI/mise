@@ -24,9 +24,10 @@ function calcTime(city, offset) {
   var date_taipei = DateTimezone(8);
   document.getElementById('tesuto2').innerHTML = date_taipei.toLocaleString();
 }
-  
-  
-  
+
+
+
+
 function ShowTime(){
   
 　var NowDate=new Date();
@@ -45,7 +46,7 @@ function ShowTime(){
 }
 </script>
 <body>
-<img onload="calcTime('taipei', 8)></img>
+<img src="" onload="calcTime('taipei', 8)></img>
 <div id="tesuto"></div>
 <div id="tesuto2"></div>
 </body>
