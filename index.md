@@ -41,7 +41,7 @@ function ShowTime(){
 <div id="eigyou"></div>
 </body>
 
-<body onload="checkfile()">
+<body>
 <div id="sonzai"></div>
 </body>
 
