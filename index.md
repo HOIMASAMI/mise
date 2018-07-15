@@ -23,9 +23,9 @@
 
 function ShowTime(){
   
-　var NowDate=new Date();
-  utc = NowDate.getTime() + (NowDate.getTimezoneOffset() * 60000);
-  NowDate = new Date(utc + (3600000*8));
+　var d=new Date();
+  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+  var NowDate=new Date(utc + (3600000*8));
  
 　var h=NowDate.getHours();
 　var m=NowDate.getMinutes();
