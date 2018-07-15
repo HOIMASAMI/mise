@@ -1,16 +1,8 @@
 <script language="JavaScript">
-  
- function DateTimezone(offset) {
-    // 建立現在時間的物件
-    d = new Date();
-    // 取得 UTC time
-    utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-    // 新增不同時區的日期資料
-    return new Date(utc + (3600000*offset));
-}
 
+<!--
 // 計算當地時區的時間
-function calcTime(city, offset) {
+function calcTime(offset) {
     // 建立現在時間的物件
   d = new Date();
     // 取得 UTC time
@@ -18,7 +10,7 @@ function calcTime(city, offset) {
     // 新增不同時區的日期資料
   nd = new Date(utc + (3600000*offset));
     // 顯示當地時間
-  return "在 " + city + " 的本地時間是 " + nd.toLocaleString();
+  return "在 " + " 的本地時間是 " + nd.toLocaleString();
 }
 
 function callfinal(){
@@ -26,11 +18,14 @@ function callfinal(){
   var date_taipei = DateTimezone(8);
   document.getElementById('tesuto2').innerHTML = date_taipei.toLocaleString();
 }
-
+-->
 
 function ShowTime(){
   
 　var NowDate=new Date();
+  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+  NowDate = new Date(utc + (3600000*8));
+ 
 　var h=NowDate.getHours();
 　var m=NowDate.getMinutes();
 　var s=NowDate.getSeconds();　
