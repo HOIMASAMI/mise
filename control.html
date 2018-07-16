@@ -14,15 +14,13 @@ https://pala.tw/what-is-web-crawler/
     <title>My test page</title>
   </head>
 
-<script type="text/javascript" language="javascript" src="js/jquery-1.4.3.js"></script>
+<script>
 
-<script type="text/javascript" language="javascript">
-
-    $.get('yasumi', function(data) {
-
-            alert(data);
-
-    });
+if (window.File && window.FileReader && window.FileList && window.Blob) {
+  // Great success! All the File APIs are supported.
+} else {
+  alert('The File APIs are not fully supported in this browser.');
+}
 
 </script>
   
