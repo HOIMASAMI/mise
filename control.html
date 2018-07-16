@@ -13,20 +13,35 @@ https://pala.tw/what-is-web-crawler/
     <meta charset="utf-8">
     <title>My test page</title>
   </head>
+<script>
+            function readTextFile(file)
+            {
+                    var rawFile = new XMLHttpRequest();
+                    rawFile.open("GET", file, false);
+                    rawFile.onreadystatechange = function ()
+                    {
+                        if(rawFile.readyState === 4)
+                        {
+                                if(rawFile.status === 200 || rawFile.status == 0)
+                                {
+                                    var splitResponse = rawFile.responseText.split( "\n" );
+                            for(index = 0; index < splitResponse.length; index++) 
+                            {
+                                    window.open(splitResponse[index]);
+                            } 
+                            
+                            
+                                }
+                        }
+                    }
+                    rawFile.send(null);
+            }
+        </script>
+    </head>
+    <body>
+        <script language="JavaScript">
+            readTextFile("./");
+        </script>
+    </body>
 
-<script src="https://code.jquery.com/jquery-1.12.3.min.js">
-  
-  function Foru() {
-    
-    clothes = $.get(yasumi);
-    gift = $.get(yasumi);
-    $.when(clothes, gift).done(init);
-    
-    console.log('clothes: ', clothes[0], ' \ngift', gift[0]);
-  }
-  
-</script>
-  
-  <body onload=Foru()>
-  </body>
 </html>
