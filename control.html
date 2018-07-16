@@ -13,23 +13,20 @@ https://pala.tw/what-is-web-crawler/
     <meta charset="utf-8">
     <title>My test page</title>
   </head>
-  
-  <script language="JavaScript">
-    window.onload = function () {
-    document.getElementById('myfile').onchange = readFile;
-};
-function readFile() {
-    file = this.files[0];
-    var fReader = new FileReader();           
-    fReader.onload = function (event) {
-        document.getElementById('fileContent').value = event.target.result;
-    };
-    fReader.readAsText(file);
-}
 
-  </script>
+<script src="https://code.jquery.com/jquery-1.12.3.min.js">
   
-  <body>
+  clothes = $.get(yasumi);
+  gift = $.get(yasumi);
+  $.when(clothes, gift).done(init);
+  
+  function init(clothes, gift) {
+    console.log('clothes: ', clothes[0], ' \ngift', gift[0]);
+  }
+  
+</script>
+  
+  <body onload="init()">
     <p> <input id="myfile"  type="file"     /></p>
     <textarea  id="fileContent" cols="68" rows="10"  ></textarea>
   </body>
