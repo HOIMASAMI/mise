@@ -6,29 +6,16 @@
   </head>
   
   <script language="JavaScript">
-    function WriteToFile(text) {
-
-var fso = new ActiveXObject('Scripting.FileSystemObject');
-
-var dateObj = new Date();
-var temp ='';
-temp = temp + dateObj.getYear();
-temp = temp + (dateObj.getMonth()+1);
-temp = temp + dateObj.getDate();
-temp = temp + dateObj.getHours();
-temp = temp + dateObj.getMinutes();
-temp = temp + dateObj.getSeconds();
-
-var folder ='D:\\error-'+temp+'.txt';
-
-var s = fso.CreateTextFile(folder, true);
-s.WriteLine(text);
-s.Close();
-
-}
+    
+var fs = require('fs'); // 引用檔案物件
+fs.readFile(process.argv[2], "utf8", function(err, data) {
+  console.log("data="+data);
+});
+console.log("----readFile End-----"); // 顯示在螢幕上
+    
   </script>
   
-  <body onload="WriteToFile('yasumi')">
+  <body>
 
   </body>
 </html>
