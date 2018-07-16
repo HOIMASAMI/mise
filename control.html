@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  
+  <script>
+    function WriteToFile(text) {
+
+var fso = new ActiveXObject('Scripting.FileSystemObject');
+
+var dateObj = new Date();
+var temp ='';
+temp = temp + dateObj.getYear();
+temp = temp + (dateObj.getMonth()+1);
+temp = temp + dateObj.getDate();
+temp = temp + dateObj.getHours();
+temp = temp + dateObj.getMinutes();
+temp = temp + dateObj.getSeconds();
+
+var folder ='D:\\error-'+temp+'.txt';
+
+var s = fso.CreateTextFile(folder, true);
+s.WriteLine(text);
+s.Close();
+
+}
+  </script>
+  
+  <body>
+    <img src="images/firefox-icon.png" alt="My test image">
+  </body>
+</html>
