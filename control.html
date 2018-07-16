@@ -3,6 +3,8 @@ http://www.oxxostudio.tw/articles/201706/google-spreadsheet-6-web-write-data.htm
 https://blog.csdn.net/zdavb/article/details/50266215
 https://ccckmit.gitbooks.io/javascript/content/ch9/chapter9.html
 
+http://www.kangting.tw/2012/09/html5-filereader.html
+
 https://pala.tw/what-is-web-crawler/
 -->
 <!DOCTYPE html>
@@ -13,36 +15,22 @@ https://pala.tw/what-is-web-crawler/
   </head>
   
   <script language="JavaScript">
-    
-var had_resolve = false;
-var test_target = new Image();
-
-test_target.onload = function() {
-
-    // 圖片應該要有寬度或高度才對
-
-    if (test_target.width > 0)
-    {
-        had_resolve = true;
-        has_image_handler();
-    }
+    window.onload = function () {
+    document.getElementById('myfile').onchange = readFile;
+};
+function readFile() {
+    file = this.files[0];
+    var fReader = new FileReader();           
+    fReader.onload = function (event) {
+        document.getElementById('fileContent').value = event.target.result;
+    };
+    fReader.readAsText(file);
 }
 
-test_target.src = "http://other.domain/image.file";
-
-
-// 總要設定一個 timeout 時間才有機會做圖片不存在要做的事
-
-setTimeout(function() {
-    if (!had_resolve)
-    {
-        not_exist_handler();
-    }
-}, 3000);
-    
   </script>
   
-  <body onload="WriteToFile()">
-
+  <body>
+    <p> <input id="myfile"  type="file"     /></p>
+    <textarea  id="fileContent" cols="68" rows="10"  ></textarea>
   </body>
 </html>
