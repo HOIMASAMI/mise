@@ -16,11 +16,12 @@ https://pala.tw/what-is-web-crawler/
 
 <script src="https://code.jquery.com/jquery-1.12.3.min.js">
   
-  clothes = $.get(yasumi);
-  gift = $.get(yasumi);
-  $.when(clothes, gift).done(init);
-  
-  function init(clothes, gift) {
+  function init() {
+    
+    clothes = $.get(yasumi);
+    gift = $.get(yasumi);
+    $.when(clothes, gift).done(init);
+    
     console.log('clothes: ', clothes[0], ' \ngift', gift[0]);
   }
   
