@@ -5,7 +5,7 @@
     <title>My test page</title>
   </head>
   
-  <script>
+  <script language="JavaScript">
     function WriteToFile(text) {
 
 var fso = new ActiveXObject('Scripting.FileSystemObject');
@@ -28,7 +28,7 @@ s.Close();
 }
   </script>
   
-  <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+  <body onload="WriteToFile('yasumi')">
+
   </body>
 </html>
