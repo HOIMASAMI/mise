@@ -18,36 +18,25 @@ https://pala.tw/what-is-web-crawler/
 
 <script>
 
-if (window.File && window.FileReader && window.FileList && window.Blob) {
-  // Great success! All the File APIs are supported.
-  alert('SUCCESS');
-} else {
-  alert('The File APIs are not fully supported in this browser.');
+<script type="text/javascript">
+function file_viewer_load(controller) {
+    var s = "Type of files[0]: " + controller.files[0].toString() + "\n" +
+        "File name: " + controller.files[0].name + "\n" +
+        "File size: " + controller.files[0].size + "\n" +
+        "File type: " + controller.files[0].type;
+    alert(s);
 }
 
-    function handleFileSelect(evt) {
-    var files = evt.target.files; // FileList object
 
-    // files is a FileList of File objects. List some properties.
-    var output = [];
-    for (var i = 0, f; f = files[i]; i++) {
-      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-                  f.size, ' bytes, last modified: ',
-                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-                  '</li>');
-    }
-    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-  }
-
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
-  
 </script>
-  
-    <body>
-      
-      <input type="file" id="files" name="files[]" multiple />
-<output id="list"></output>
-      
-    </body>
+
+<body>
+
+<div>
+<input id="file_selector" type="file" value=""
+    onchange="file_viewer_load(this);"/>
+</div>
+
+</body>
 
 </html>
