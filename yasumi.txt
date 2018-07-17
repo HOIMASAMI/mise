@@ -1,1 +1,5 @@
-setTimeout('var data="開店中2"',1000)
+var data
+function jaja(){
+  data="開店中2"
+}
+setTimeout('jaja()',1000)
