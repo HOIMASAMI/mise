@@ -1,5 +1,5 @@
-var data="DEFORUTO"
 function jaja(){
-  window.data="開店中2"
+  return '開店中2'
   setTimeout('jaja()',1000)
 }
+var data=jaja();
