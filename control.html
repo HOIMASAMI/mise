@@ -18,21 +18,58 @@ https://pala.tw/what-is-web-crawler/
   </head>
 
 <script type="text/javascript">
+function FileViewer(args) {
+    for (var p in args)
+        this[p] = args[p];
 
-function file_viewer_load(controller) {
-    var s = "Type of files[0]: " + controller.files[0].toString() + "\n" +
-        "File name: " + controller.files[0].name + "\n" +
-        "File size: " + controller.files[0].size + "\n" +
-        "File type: " + controller.files[0].type;
-    alert(s);
+    this.reader = new FileReader();
+
+    this.reader.onloadend = (function(self) {
+        return function() {
+                    self.loaded();
+                }
+    })(this);
+}
+FileViewer.prototype.load = function() {
+    this.file = this.controller.files[0];
+    this.reader.readAsText(this.file);
+}
+FileViewer.prototype.loaded = function() {
+    this.view_name.value = this.file.name;
+    this.view_size.value = this.file.size;
+    this.view.value = this.reader.result;
 }
 
+var file_viewer = undefined;
 
+function init() {
+    file_viewer = new FileViewer(
+        {
+            controller: document.getElementById('file_selector'),
+            view_name: document.getElementById('show_filename'),
+            view_size: document.getElementById('show_filesize'),
+            view: document.getElementById('show_box')
+        }
+    );
+}
 </script>
 
-<body onload="file_viewer_load('./yasumi');">
+<body onload="init();">
 
+<div>
+<input id="file_selector" type="file" value="https://hoimasami.github.io/mise/yasumi.txt"
+    onload="file_viewer.load();"/>
+</div>
 
+<div>
+Name: <input id="show_filename" type="text"
+            readonly="true" value=""/>
+Size: <input id="show_filesize" type="text"
+            readonly="true" value=""/>
+<br/>
+<textarea id="show_box" readonly="true" cols="60" rows="20">
+</textarea>
+</div>
 
 </body>
 
