@@ -1,5 +1,5 @@
 function jaja(){
-  return '開店中'
+  return 'YES開店中'
   setTimeout('jaja()',1000)
 }
 var data=jaja();
