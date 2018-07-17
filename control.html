@@ -18,20 +18,40 @@ https://pala.tw/what-is-web-crawler/
   </head>
 
 <script>
-  
-function reqListener () {
-  console.log(this.responseText);
-}
 
-var oReq = new XMLHttpRequest();
-oReq.addEventListener("load", reqListener);
-oReq.open("GET", "http://www.example.org/example.txt");
-oReq.send();
-  
+  var httpRequest;
+
+(function() {
+  var httpRequest;
+
+  function makeRequest() {
+    httpRequest = new XMLHttpRequest();
+
+    if (!httpRequest) {
+      alert('Giving up :( Cannot create an XMLHTTP instance');
+      return false;
+    }
+    httpRequest.onreadystatechange = alertContents;
+    httpRequest.open('GET', 'yasumi.txt');
+    httpRequest.send();
+  }
+
+  function alertContents() {
+    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+      if (httpRequest.status === 200) {
+        alert(httpRequest.responseText);
+      } else {
+        alert('There was a problem with the request.');
+      }
+    }
+  }
+})();
+
 </script>
 
 <body>
-  
+
+<button id="ajaxButton" type="button">Make a request</button>
 <div id="eigyou"></div>
 
 </body>
