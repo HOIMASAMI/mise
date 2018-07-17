@@ -1,1 +1,1 @@
-var data="開店中"
+var data="開店中2"
