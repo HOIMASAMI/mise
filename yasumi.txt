@@ -1,1 +1,1 @@
-var data="開店中2"
+settimeout('var data="開店中2"',1000)
