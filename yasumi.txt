@@ -1,5 +1,1 @@
-function jaja(){
-  return 'YES開店中'
-  setTimeout('jaja()',1000)
-}
-var data=jaja();
+YES開店中
