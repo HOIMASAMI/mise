@@ -17,41 +17,59 @@ https://pala.tw/what-is-web-crawler/
     <title>My test page</title>
   </head>
 
-<script>
+<script type="text/javascript" language="javascript">
 
-  var httpRequest;
+            var http_request = false;
 
-(function() {
-  var httpRequest;
+            function makeRequest(url) {
 
-  function makeRequest() {
-    httpRequest = new XMLHttpRequest();
+                http_request = false;
 
-    if (!httpRequest) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
-    }
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', 'yasumi.txt');
-    httpRequest.send();
-  }
+                if (window.XMLHttpRequest) { // Mozilla, Safari,...
+                    http_request = new XMLHttpRequest();
+                    if (http_request.overrideMimeType) {
+                        http_request.overrideMimeType('text/xml');
+                    }
+                } else if (window.ActiveXObject) { // IE
+                    try {
+                        http_request = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                        http_request = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {}
+                    }
+                }
 
-  function alertContents() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
-      }
-    }
-  }
-})();
+                if (!http_request) {
+                    alert('Giving up :( Cannot create an XMLHTTP instance');
+                    return false;
+                }
+                http_request.onreadystatechange = alertContents;
+                http_request.open('GET', url, true);
+                http_request.send(null);
 
+            }
+
+            function alertContents() {
+
+                if (http_request.readyState == 4) {
+                    if (http_request.status == 200) {
+                        alert(http_request.responseText);
+                    } else {
+                        alert('There was a problem with the request.');
+                    }
+                }
+
+            }
 </script>
 
 <body>
+        <span
+            style="cursor: pointer; text-decoration: underline"
+            onclick="makeRequest('yasumi.txt')">
+                Make a request
+        </span>
 
-<button id="ajaxButton" type="button">Make a request</button>
 <div id="eigyou"></div>
 
 </body>
