@@ -17,15 +17,20 @@ https://pala.tw/what-is-web-crawler/
     <title>My test page</title>
   </head>
 
-<script type="text/javascript" src="yasumi.txt"></script>
 <script>
-  function Callcall(){
-document.getElementById('eigyou').innerHTML = data
-    setTimeout('Callcall()',1000)
-  }
+  
+function reqListener () {
+  console.log(this.responseText);
+}
+
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "http://www.example.org/example.txt");
+oReq.send();
+  
 </script>
 
-<body onload="Callcall()">
+<body>
   
 <div id="eigyou"></div>
 
