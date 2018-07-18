@@ -2,7 +2,7 @@
   
               var http_request = false;
               var temp=null;
-              var tempii=0;
+//              var tempii=0;
             function makeRequest(url) {
                 http_request = false;
                 if (window.XMLHttpRequest) { // Mozilla, Safari,...
@@ -30,10 +30,11 @@
 //                alert(temp);
 //                alert(tempii);
 //                return temp;
-                tempii = alertContents();
-                alert('out of alertC' + temp);
-                alert('makerequest tempii '+tempii);
-                return tempii;
+//                tempii = alertContents();
+//                alert('out of alertC = ' + temp);
+//                alert('makerequest tempii = '+tempii);
+//                return tempii;
+                setTimeout('makeRequest('yasumi.txt')',1000);
             }
 
 function alertContents() {
@@ -42,11 +43,11 @@ function alertContents() {
 //                        alert(http_request.responseText);
                         temp = http_request.responseText;
 //                          return temp;
-                        alert('alertcontents temp '+temp);
-                        return http_request.responseText;
+//                        alert('alertcontents temp = '+temp);
+//                        return http_request.responseText;
                     } else {
                         alert('錯誤There was a problem with the request.');
-                        return '錯誤';
+//                        return '錯誤';
                     }
                 }
 }
@@ -61,12 +62,15 @@ function ShowTime(){
 　var h=NowDate.getHours();
 　var m=NowDate.getMinutes();
 　var s=NowDate.getSeconds();
- var youbi=NowDate.getDay();
-//makeRequest('yasumi.txt');
- var rijio =new Number(makeRequest('yasumi.txt'));
+
+  var youbi=NowDate.getDay();
+
+  makeRequest('yasumi.txt');
+  var rijio =new Number(temp);
+
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
   document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
-  document.getElementById('rijioyou').innerHTML ='Showtime ' + rijio;
+  document.getElementById('rijioyou').innerHTML ='Showtime = ' + rijio;
 //  alert(rijio);
   
   if ( rijio == 1 ) {
