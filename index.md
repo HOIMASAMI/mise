@@ -66,16 +66,16 @@ function ShowTime(){
   if ( rijio == 1 ) {
     document.getElementById('eigyou').innerHTML = '1特殊開店中';
   } else if ( rijio == 0 ) {
-    document.getElementById('eigyou').innerHTML = '2特殊已售完';
+    document.getElementById('eigyou').innerHTML = '0特殊已售完';
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '週日休息';
   } else if ( ((h < 11) || (h >= 19)) ) {
     document.getElementById('eigyou').innerHTML = '關店中';
-  } else if ( ((h < 19) && (h >= 16)) ) {
+  } else if ( (( ( h*60+m ) < 1140) && ( ( h*60+m ) >= 990)) ) {
     document.getElementById('eigyou').innerHTML = '開店中';
-  } else if ( ((h < 16) && (h >= 14)) ) {
+  } else if ( (( ( h*60+m ) < 990) && ( ( h*60+m ) >= 870)) ) {
     document.getElementById('eigyou').innerHTML = '關店中';
-  } else if ( ((h < 14) && (h >= 11)) ) {
+  } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 660)) ) {
     document.getElementById('eigyou').innerHTML = '開店中';
   }
   setTimeout('ShowTime()',1000);
