@@ -63,9 +63,9 @@ function ShowTime(){
   document.getElementById('rijioyou').innerHTML = rijio;
   alert(rijio);
   
-  if ( rijio == '開' ) {
+  if ( rijio == 1 ) {
     document.getElementById('eigyou').innerHTML = '1特殊開店中';
-  } else if ( rijio == '關' ) {
+  } else if ( rijio == 0 ) {
     document.getElementById('eigyou').innerHTML = '2特殊已售完';
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '週日休息';
