@@ -34,7 +34,7 @@
 //                alert('out of alertC = ' + temp);
 //                alert('makerequest tempii = '+tempii);
 //                return tempii;
-                setTimeout('makeRequest("yasumi.txt")',1000);
+//                setTimeout('makeRequest("yasumi.txt")',1000);
             }
 
 function alertContents() {
@@ -50,6 +50,7 @@ function alertContents() {
 //                        return '錯誤';
                     }
                 }
+                setTimeout('alertContents()',1000);
 }
 
 function ShowTime(){
