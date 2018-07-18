@@ -9,7 +9,8 @@ function ShowTime(){
   
 　var h=NowDate.getHours();
 　var m=NowDate.getMinutes();
-　var s=NowDate.getSeconds();　
+　var s=NowDate.getSeconds();
+ var youbi=NowDate.getDay();
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
   
    if ( ((h < 11) || (h >= 19)) ) {
