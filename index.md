@@ -1,8 +1,8 @@
 <script language="JavaScript">
   
               var http_request = false;
-              var temp=0;
-              var tempii=0;
+              var temp=null;
+//              var tempii=0;
             function makeRequest(url) {
                 http_request = false;
                 if (window.XMLHttpRequest) { // Mozilla, Safari,...
