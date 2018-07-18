@@ -1,7 +1,7 @@
 <script language="JavaScript">
   
               var http_request = false;
-              var temp=null;
+              var temp=10;
 //              var tempii=0;
             function makeRequest(url) {
                 http_request = false;
