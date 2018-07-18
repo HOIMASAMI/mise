@@ -34,7 +34,7 @@
 //                alert('out of alertC = ' + temp);
 //                alert('makerequest tempii = '+tempii);
 //                return tempii;
-//                setTimeout('makeRequest("yasumi.txt")',1000);
+                setTimeout('makeRequest("yasumi.txt")',1000);
             }
 
 function alertContents() {
@@ -46,7 +46,7 @@ function alertContents() {
 //                        alert('alertcontents temp = '+temp);
 //                        return http_request.responseText;
                     } else {
-                        alert('錯誤There was a problem with the request.');
+                        console.log('錯誤 There was a problem with the request.');
 //                        return '錯誤';
                     }
                 }
@@ -70,7 +70,7 @@ function ShowTime(){
   var rijio =new Number(temp);
 
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
-  document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
+//  document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
   document.getElementById('rijioyou').innerHTML ='Showtime = ' + rijio;
 //  alert(rijio);
   
@@ -97,8 +97,8 @@ function ShowTime(){
 
 <body onload="ShowTime()">
 <div id="showbox"></div>
-  <div id="kyouha"></div>
-  <div id="rijioyou"></div>
+<!-- <div id="kyouha"></div> -->
+<div id="rijioyou"></div>
 <div id="eigyou"></div>
 </body>
 
