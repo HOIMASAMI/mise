@@ -1,6 +1,8 @@
 <script language="JavaScript">
   
               var http_request = false;
+              var temp=0;
+              var tempii=0;
             function makeRequest(url) {
                 http_request = false;
                 if (window.XMLHttpRequest) { // Mozilla, Safari,...
@@ -24,14 +26,16 @@
                 http_request.onreadystatechange = alertContents;
                 http_request.open('GET', url, true);
                 http_request.send(null);
-                alert(http_request.responseText);
-                return http_request.responseText;
+                tempii=alertContents();
+                alert(tempii);
+                return tempii;
             }
             function alertContents() {
                 if (http_request.readyState == 4) {
                     if (http_request.status == 200) {
 //                        alert(http_request.responseText);
-//                          return http_request.responseText;
+                        temp = String(http_request.responseText);
+                          return temp;
                     } else {
                         alert('錯誤There was a problem with the request.');
 //                          return '錯誤';
