@@ -35,7 +35,7 @@
                 if (http_request.readyState == 4) {
                     if (http_request.status == 200) {
 //                        alert(http_request.responseText);
-                        temp = String(http_request.responseText);
+                        temp = http_request.responseText;
                           return temp;
                     } else {
                         alert('錯誤There was a problem with the request.');
@@ -55,7 +55,7 @@ function ShowTime(){
 　var m=NowDate.getMinutes();
 　var s=NowDate.getSeconds();
  var youbi=NowDate.getDay();
- var rijio=String(makeRequest('yasumi.txt'));
+ var rijio=makeRequest('yasumi.txt');
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
   document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
   document.getElementById('rijioyou').innerHTML = rijio;
