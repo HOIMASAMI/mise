@@ -55,7 +55,7 @@ function ShowTime(){
 　var m=NowDate.getMinutes();
 　var s=NowDate.getSeconds();
  var youbi=NowDate.getDay();
- var rijio=makeRequest('yasumi.txt');
+ var rijio=String(makeRequest('yasumi.txt'));
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
   document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
   document.getElementById('rijioyou').innerHTML = rijio;
