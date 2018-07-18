@@ -24,16 +24,16 @@
                 http_request.onreadystatechange = alertContents;
                 http_request.open('GET', url, true);
                 http_request.send(null);
-                return alertContents();
+//                return alertContents();
             }
             function alertContents() {
                 if (http_request.readyState == 4) {
                     if (http_request.status == 200) {
-//                        alert(http_request.responseText);
-                          return http_request.responseText;
+                        alert(http_request.responseText);
+//                          return http_request.responseText;
                     } else {
-//                        alert('There was a problem with the request.');
-                          return '錯誤';
+                        alert('There was a problem with the request.');
+//                          return '錯誤';
                     }
                 }
             }
