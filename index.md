@@ -43,7 +43,7 @@ function alertContents() {
 //                        alert(http_request.responseText);
                         temp = http_request.responseText;
 //                          return temp;
-//                        alert('alertcontents temp = '+temp);
+                        alert('alertcontents temp = '+temp);
 //                        return http_request.responseText;
                     } else {
                         console.log('錯誤 There was a problem with the request.');
