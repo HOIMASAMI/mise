@@ -34,7 +34,7 @@
 //                alert('out of alertC = ' + temp);
 //                alert('makerequest tempii = '+tempii);
 //                return tempii;
-                setTimeout('makeRequest("yasumi.txt")',1000);
+//                setTimeout('makeRequest("yasumi.txt")',1000);
             }
 
 function alertContents() {
@@ -43,14 +43,14 @@ function alertContents() {
 //                        alert(http_request.responseText);
                         temp = http_request.responseText;
 //                          return temp;
-                        alert('alertcontents temp = '+temp);
+//                        alert('alertcontents temp = '+temp);
 //                        return http_request.responseText;
                     } else {
                         console.log('錯誤 There was a problem with the request.');
 //                        return '錯誤';
                     }
                 }
-                setTimeout('alertContents()',1000);
+//                setTimeout('alertContents()',1000);
 }
 
 function ShowTime(){
