@@ -61,7 +61,7 @@ function ShowTime(){
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
   document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
   document.getElementById('rijioyou').innerHTML = rijio;
-  alert(rijio);
+//  alert(rijio);
   
   if ( rijio == 1 ) {
     document.getElementById('eigyou').innerHTML = '1特殊開店中';
