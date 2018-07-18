@@ -60,9 +60,9 @@ function ShowTime(){
   document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
   document.getElementById('rijioyou').innerHTML = rijio;
   
-  if ( rijio == '開' ) {
+  if ( rijio == "開" ) {
     document.getElementById('eigyou').innerHTML = '1特殊開店中';
-  } else if ( rijio == '關' ) {
+  } else if ( rijio == "關" ) {
     document.getElementById('eigyou').innerHTML = '2特殊已售完';
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '週日休息';
