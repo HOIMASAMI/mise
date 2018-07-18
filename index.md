@@ -1,3 +1,5 @@
+<script type="text/javascript" language="javascript" src='rinji.js'>
+
 <script language="JavaScript">
 
 function ShowTime(){
