@@ -36,7 +36,7 @@ function alertContents() {
                 if (http_request.readyState == 4) {
                     if (http_request.status == 200) {
 //                        alert(http_request.responseText);
-//                        temp = http_request.responseText;
+                        temp = http_request.responseText;
 //                          return temp;
                     } else {
                         alert('錯誤There was a problem with the request.');
