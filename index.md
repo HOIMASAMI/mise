@@ -27,9 +27,9 @@
                 http_request.open('GET', url, true);
                 http_request.send(null);
                 tempii=alertContents();
-                alert(temp);
-                alert(tempii);
-                return tempii;
+//                alert(temp);
+//                alert(tempii);
+                return temp;
             }
             function alertContents() {
                 if (http_request.readyState == 4) {
