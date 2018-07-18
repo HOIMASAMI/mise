@@ -2,7 +2,7 @@
   
               var http_request = false;
               var temp=null;
-//              var tempii=0;
+              var tempii=0;
             function makeRequest(url) {
                 http_request = false;
                 if (window.XMLHttpRequest) { // Mozilla, Safari,...
@@ -30,7 +30,8 @@
 //                alert(temp);
 //                alert(tempii);
 //                return temp;
-                return alertContents();
+                tempii = alertContents();
+                return tempii;
             }
 
 function alertContents() {
@@ -39,7 +40,7 @@ function alertContents() {
 //                        alert(http_request.responseText);
                         temp = http_request.responseText;
 //                          return temp;
-                        alert('alertcontents '+http_request.responseText)
+                        alert('alertcontents '+temp)
                         return http_request.responseText;
                     } else {
                         alert('錯誤There was a problem with the request.');
