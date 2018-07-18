@@ -24,7 +24,7 @@
                 http_request.onreadystatechange = alertContents;
                 http_request.open('GET', url, true);
                 http_request.send(null);
-                alert(http_requset.responseText);
+                alert(http_request.responseText);
                 return http_request.responseText;
             }
             function alertContents() {
