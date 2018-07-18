@@ -27,10 +27,10 @@
                 if (http_request.readyState == 4) {
                     if (http_request.status == 200) {
 //                        alert(http_request.responseText);
-                          document.getElementById('eigyou').innerHTML = http_request.responseText;
+                          return http_request.responseText;
                     } else {
 //                        alert('There was a problem with the request.');
-document.getElementById('eigyou').innerHTML = '錯誤';
+                          return '錯誤';
                     }
                 }
             }
