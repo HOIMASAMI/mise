@@ -55,12 +55,15 @@ function ShowTime(){
 　var h=NowDate.getHours();
 　var m=NowDate.getMinutes();
 　var s=NowDate.getSeconds();
- var youbi=NowDate.getDay();
+// var youbi=NowDate.getDay();
+var youbi=0;
+ 
  makeRequest('yasumi.txt');
  var rijio =new Number(temp);
+ 
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
   document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
-  document.getElementById('rijioyou').innerHTML = rijio;
+//  document.getElementById('rijioyou').innerHTML = rijio;
 //  alert(rijio);
   
   if ( rijio == 1 ) {
