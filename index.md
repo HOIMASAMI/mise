@@ -30,6 +30,7 @@
 //                alert(temp);
 //                alert(tempii);
 //                return temp;
+                return alertContents();
             }
 
 function alertContents() {
@@ -38,9 +39,10 @@ function alertContents() {
 //                        alert(http_request.responseText);
                         temp = http_request.responseText;
 //                          return temp;
+                        return http_request.responseText;
                     } else {
                         alert('錯誤There was a problem with the request.');
-//                          return '錯誤';
+                        return '錯誤';
                     }
                 }
 }
@@ -55,15 +57,12 @@ function ShowTime(){
 　var h=NowDate.getHours();
 　var m=NowDate.getMinutes();
 　var s=NowDate.getSeconds();
-// var youbi=NowDate.getDay();
-var youbi=0;
- 
- makeRequest('yasumi.txt');
- var rijio =new Number(temp);
- 
+ var youbi=NowDate.getDay();
+//makeRequest('yasumi.txt');
+ var rijio =new Number(makeRequest('yasumi.txt'));
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
   document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
-//  document.getElementById('rijioyou').innerHTML = rijio;
+  document.getElementById('rijioyou').innerHTML = rijio;
 //  alert(rijio);
   
   if ( rijio == 1 ) {
