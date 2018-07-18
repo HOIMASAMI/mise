@@ -1,4 +1,6 @@
-            var http_request = false;
+              var http_request = false;
+              var temp=10;
+//              var tempii=0;
             function makeRequest(url) {
                 http_request = false;
                 if (window.XMLHttpRequest) { // Mozilla, Safari,...
@@ -22,15 +24,29 @@
                 http_request.onreadystatechange = alertContents;
                 http_request.open('GET', url, true);
                 http_request.send(null);
+//                tempii=alertContents();
+//                alert(temp);
+//                alert(tempii);
+//                return temp;
+//                tempii = alertContents();
+//                alert('out of alertC = ' + temp);
+//                alert('makerequest tempii = '+tempii);
+//                return tempii;
+//                setTimeout('makeRequest("yasumi.txt")',1000);
             }
-            function alertContents() {
+
+function alertContents() {
                 if (http_request.readyState == 4) {
                     if (http_request.status == 200) {
 //                        alert(http_request.responseText);
-                          return http_request.responseText;
+                        temp = http_request.responseText;
+//                          return temp;
+//                        alert('alertcontents temp = '+temp);
+//                        return http_request.responseText;
                     } else {
-//                        alert('There was a problem with the request.');
-                          return '錯誤';
+                        console.log('錯誤 There was a problem with the request.');
+//                        return '錯誤';
                     }
                 }
-            }
+//                setTimeout('alertContents()',1000);
+}
