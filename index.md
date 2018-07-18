@@ -16,6 +16,7 @@ function ShowTime(){
  var youbi=NowDate.getDay();
  var rijio=makeRequest('yasumi.txt');
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
+  document.getElementById('eigyou').innerHTML = '<br></br>今天是' + youbi ;
   
   if ( rijio == '開' ) {
     document.getElementById('eigyou').innerHTML = '1特殊開店中';
