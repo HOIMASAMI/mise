@@ -1,4 +1,5 @@
 <script type="text/javascript" language="javascript" src='rinji.js'>
+</script>
 
 <script language="JavaScript">
 
@@ -13,12 +14,12 @@ function ShowTime(){
 　var m=NowDate.getMinutes();
 　var s=NowDate.getSeconds();
  var youbi=NowDate.getDay();
- var rinji=makeRequest('yasumi.txt');
+ var rijio=makeRequest('yasumi.txt');
 　document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
   
-  if ( rinji == '開' ) {
+  if ( rijio == '開' ) {
     document.getElementById('eigyou').innerHTML = '1特殊開店中';
-  } else if ( rinji == '關' ) {
+  } else if ( rijio == '關' ) {
     document.getElementById('eigyou').innerHTML = '2特殊已售完';
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '週日休息';
