@@ -56,9 +56,11 @@ https://pala.tw/what-is-web-crawler/
 
                 if (http_request.readyState == 4) {
                     if (http_request.status == 200) {
-                        alert(http_request.responseText);
+//                        alert(http_request.responseText);
+                          document.getElementById('eigyou').innerHTML = http_request.responseText;
                     } else {
-                        alert('There was a problem with the request.');
+//                        alert('There was a problem with the request.');
+document.getElementById('eigyou').innerHTML = '錯誤';
                     }
                 }
 
