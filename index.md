@@ -31,6 +31,8 @@
 //                alert(tempii);
 //                return temp;
                 tempii = alertContents();
+                alert('out of alertC' + temp);
+                alert('makerequest tempii '+tempii);
                 return tempii;
             }
 
@@ -40,7 +42,7 @@ function alertContents() {
 //                        alert(http_request.responseText);
                         temp = http_request.responseText;
 //                          return temp;
-                        alert('alertcontents '+temp)
+                        alert('alertcontents temp '+temp);
                         return http_request.responseText;
                     } else {
                         alert('錯誤There was a problem with the request.');
