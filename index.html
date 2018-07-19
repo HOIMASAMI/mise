@@ -40,6 +40,8 @@ function ShowTime(){
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 本日開店中</p>';
   } else if ( rijio == 0 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 本日已售完</p>';
+  } else if ( rijio == 3 ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 臨時休業</p>';
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 週日休息</p>';
   } else if ( ((h < 11) || (h >= 19)) ) {
