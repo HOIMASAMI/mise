@@ -45,11 +45,11 @@ function ShowTime(){
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 週日休息</p>';
   } else if ( ((h < 11) || (h >= 19)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 店中</p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 關店準備中</p>';
   } else if ( (( ( h*60+m ) < 1140) && ( ( h*60+m ) >= 990)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 營業中</p>';
   } else if ( (( ( h*60+m ) < 990) && ( ( h*60+m ) >= 870)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 營業中</p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 關店休息中</p>';
   } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 660)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 營業中</p>';
   }
@@ -63,7 +63,7 @@ function ShowTime(){
 <!-- <div id="kyouha"></div> -->
 <!-- <div id="rijioyou"></div> -->
 <div id="eigyou"></div>
-<p align="center"><a href="zentate.htm">菜單在此</a></p>
+<p><a href="zentate.htm">菜單在此</a></p>
 <br><br/>
 <p align="center">本店營業時間 : 週一至週六</p>
 <p align="center">中午 AM 11:00 ~ 下午 PM 02:30</p>
