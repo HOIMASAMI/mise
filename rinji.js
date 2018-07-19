@@ -21,6 +21,7 @@
                     alert('Giving up :( Cannot create an XMLHTTP instance');
                     return false;
                 }
+              url='yasumi.txt?_=' + new Date().getTime();
                 http_request.onreadystatechange = alertContents;
                 http_request.open('GET', url, true);
                 http_request.send(null);
