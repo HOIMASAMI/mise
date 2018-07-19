@@ -21,9 +21,10 @@
                     alert('Giving up :( Cannot create an XMLHTTP instance');
                     return false;
                 }
-              url='yasumi.txt?_=' + new Date().getTime();
+              url='yasumi.txt?_=' + new Date().getTime(); //リアルタイムファイル読み込み更新実現
                 http_request.onreadystatechange = alertContents;
                 http_request.open('GET', url, true);
+//xhr.setRequestHeader('Cache-Control', 'no-cache');
                 http_request.send(null);
 //                tempii=alertContents();
 //                alert(temp);
