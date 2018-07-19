@@ -23,14 +23,15 @@ function ShowTime(){
   
 　var h=NowDate.getHours();
 　var m=NowDate.getMinutes();
-　var s=NowDate.getSeconds();
+//　var s=NowDate.getSeconds();
 
   var youbi=NowDate.getDay();
 
   makeRequest('yasumi.txt');
   var rijio =new Number(temp);
 
-　document.getElementById('showbox').innerHTML ='<p align="center">' h+'時'+m+'分'+s+'秒 </p>';
+//　document.getElementById('showbox').innerHTML ='<p align="center">' h+'時'+m+'分'+s+'秒 </p>';
+　document.getElementById('showbox').innerHTML ='<p align="center">' h+'時'+m+'分'+' </p>';
 //  document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
 //  document.getElementById('rijioyou').innerHTML ='Showtime = ' + rijio;
 //  alert(rijio);
