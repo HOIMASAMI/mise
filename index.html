@@ -50,11 +50,11 @@ function ShowTime(){
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="iconyoubi01.png" alt="週日休息" title="週日休息"></p>';
   } else if ( ((h < 11) || (h >= 19)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="icondown01.png" alt="休息休息中" title="休息休息中"></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></p>';
   } else if ( (( ( h*60+m ) < 1140) && ( ( h*60+m ) >= 990)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></p>';
   } else if ( (( ( h*60+m ) < 990) && ( ( h*60+m ) >= 870)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="icondown01.png" alt="休息休息中" title="休息休息中"></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></p>';
   } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 660)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></p>';
   }
