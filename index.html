@@ -48,7 +48,7 @@ function ShowTime(){
   } else if ( rijio == 3 ) {                           // "4" 為正常營業
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 臨時休業</p>';
   } else if ( youbi==0 ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 週日休息</p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="iconyoubi01.png" alt="週日休息" title="週日休息"></p>';
   } else if ( ((h < 11) || (h >= 19)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="icondown01.png" alt="關店休息中" title="關店休息中"></p>';
   } else if ( (( ( h*60+m ) < 1140) && ( ( h*60+m ) >= 990)) ) {
