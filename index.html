@@ -40,47 +40,51 @@ function ShowTime(){
   if ( rijio == 10 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><img src="iconcheck01.png" alt="確認中..." title="確認中..."></p>';
   } else if ( rijio == 0 ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="iconempty01.png" alt="本日已售完" title="本日已售完"></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconempty01.png" alt="本日已售完" title="本日已售完"></span></p>';
   } else if ( rijio == 1 ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 本日開店中</p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : 本日開店中</span></p>';
   } else if ( rijio == 2 ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="iconfull01.png" alt="目前客滿中" title="目前客滿中"></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconfull01.png" alt="目前客滿中" title="目前客滿中"></span></p>';
   } else if ( rijio == 3 ) {                                                // "4" 為正常營業
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : 臨時休業</p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : 臨時休業</span></p>';
   } else if ( youbi==0 ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="iconyoubi01.png" alt="週日休息" title="週日休息"></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconyoubi01.png" alt="週日休息" title="週日休息"></span></p>';
   } else if ( ((h < 11) || (h >= 19)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
   } else if ( (( ( h*60+m ) < 1140) && ( ( h*60+m ) >= 990)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
   } else if ( (( ( h*60+m ) < 990) && ( ( h*60+m ) >= 870)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
   } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 660)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
   }
   setTimeout('ShowTime()',1500);
 }
   </script>
 
 <body onload="ShowTime()" background="bkp03.jpg">
-<p align="center"><font size="6">小英的店</font></p>
+<p align="center"><b><font face="微軟正黑體" style="font-size: 28pt">
+<span style="background-color: #FFFFFF">小英的店</span></font></b></p>
 <div align="center" id="showbox"></div>
 <!-- <div id="kyouha"></div> -->
 <!-- <div id="rijioyou"></div> -->
 <div align="center" id="eigyou"></div>
 <p align="center"><a href="zentate.htm"><img src="iconzentate01.png" alt="菜單在此" title="菜單在此"></a></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">本店營業時間 : 週一至週六</span></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">中午 AM 11:00 ~ 下午 PM 02:30</span></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">下午 PM 04:30 ~ 晚上 PM 07:00</span></p>
+<p align="center"><font color="#FFFFFF">
+<span style="font-size: 16pt; background-color:#000000">※賣完為止</span></font></p>
+<span style="font-size: 16pt">
 <br><br/>
-<p align="center">本店營業時間 : 週一至週六</p>
-<p align="center">中午 AM 11:00 ~ 下午 PM 02:30</p>
-<p align="center">下午 PM 04:30 ~ 晚上 PM 07:00</p>
-<p align="center">※<font color="#FFFFFF"><span style="background-color: #000000">賣完為止</span></font></p>
-<br><br/>
-<p align="center">台中市工業區一路 58 巷 33 弄 33-6 號</p>
-<p align="center">※ 位於東海大學東部外下方(第二校區下方),世界貿易中心以西</p>
-<p align="center">電話(TEL) : 04-2358-4235 ; 0930-713-326</p>
-<p align="center">本店網址&amp;QR碼</p>
+</span>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">台中市工業區一路 58 巷 33 弄 33-6 號</span></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">※ 位於東海大學東部外下方(第二校區下方),世界貿易中心以西</span></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">電話(TEL) : 04-2358-4235 ; 0930-713-326</span></p>
+<br>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">本店網址&amp;QR碼</span></p>
 <p align="center"><a href="https://hoimasami.github.io/mise/">
-https://hoimasami.github.io/mise/</a></p>
+<span style="font-size: 16pt">https://hoimasami.github.io/mise/</span></a></p>
 <p align="center">
 <img border="0" src="QRCODE.png" width="154" height="153"></p>
 
