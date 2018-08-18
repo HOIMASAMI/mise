@@ -64,13 +64,13 @@ function ShowTime(){
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : 臨時休業</span></p>';
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconyoubi01.png" alt="週日休息" title="週日休息"></span></p>';
-  } else if ( ((h < 11) || (h >= 19)) ) {
+  } else if ( ((h < 10) || (h >= 19)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
   } else if ( (( ( h*60+m ) < 1140) && ( ( h*60+m ) >= 990)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
   } else if ( (( ( h*60+m ) < 990) && ( ( h*60+m ) >= 870)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
-  } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 660)) ) {
+  } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 600)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
   }
   setTimeout('ShowTime()',1500);
