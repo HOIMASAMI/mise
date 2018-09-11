@@ -55,12 +55,14 @@ function ShowTime(){
   if ( rijio == 10 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><img src="iconcheck01.png" alt="確認中..." title="確認中..."></p>';
   } else if ( rijio == 0 ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconempty01.png" alt="本日已售完" title="本日已售完"></span></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconempty02.png" alt="上午已售完" title="上午已售完"></span></p>';
   } else if ( rijio == 1 ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : 本日開店中</span></p>';
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconempty01.png" alt="本日已售完" title="本日已售完"></span></p>';
   } else if ( rijio == 2 ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : 本日開店中</span></p>';
+  } else if ( rijio == 3 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconfull01.png" alt="目前客滿中" title="目前客滿中"></span></p>';
-  } else if ( rijio == 3 ) {                                                // "4" 為正常營業
+  } else if ( rijio == 4 ) {                                                // "5" 為正常營業
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : 臨時休業</span></p>';
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconyoubi01.png" alt="週日休息" title="週日休息"></span></p>';
