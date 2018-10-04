@@ -26,8 +26,6 @@
   </head>
 
   <script type="text/javascript" src='rinji.js?v=343'></script>
-
-  <script type="text/javascript" src='sitsituation.js?v=398'></script>
   
   <script language="JavaScript">
 function ShowTime(){
@@ -73,21 +71,30 @@ function ShowTime(){
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
   }
 
+  setTimeout('ShowTime()',1500);
+}
+  </script>
 
-    makeRequesttt('isukazu.txt');
-  var sitstua =new Number(tempp);
+  <script type="text/javascript" src='sitsituation.js?v=398'></script>
 
-  if ( sitstua == 1000 ) {
-    document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">確認中...</span></p>';
-  } else if ( sitstua == 0 ) {
-    document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">空位有 : 滿桌 </span></p>';
+  <script language="JavaScript">
+    function kensaisu(){
+
+      makeRequesttt('isukazu.txt');
+      var sitstua =new Number(tempp);
+
+      if ( sitstua == 1000 ) {
+        document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">確認中...</span></p>';
+      } else if ( sitstua == 0 ) {
+        document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">空位有 : 滿桌 </span></p>';
   } else {
     document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">空位有 : '+sitstua+' </span></p>';
   }
 
-  setTimeout('ShowTime()',1500);
-}
+      setTimeout('kensaisu()',1500);
+    }
   </script>
+
 
 
 <body onload="ShowTime()" background="bkp03.jpg">
@@ -96,6 +103,7 @@ function ShowTime(){
 <div align="center" id="showbox"></div>
 <!-- <div id="kyouha"></div> -->
 <!-- <div id="rijioyou"></div> -->
+<p align="center"><button onclick="kensaisu()">確認目前空位</button></p>
 <div align="center" id="sitcondi"></div>
 <div align="center" id="eigyou"></div>
 <p align="center"><a href="zentate.html"><img src="iconzentate01.png" alt="菜單在此" title="菜單在此"></a></p>
