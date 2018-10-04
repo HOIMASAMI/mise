@@ -26,6 +26,8 @@
   </head>
 
   <script type="text/javascript" src='rinji.js?v=343'></script>
+
+  <script type="text/javascript" src='sitsituation.js?v=343'></script>
   
   <script language="JavaScript">
 function ShowTime(){
@@ -46,6 +48,10 @@ function ShowTime(){
 //  document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
 //  document.getElementById('rijioyou').innerHTML ='Showtime = ' + rijio;
 //  alert(rijio);
+
+  makeRequesttt('isukazu.txt');
+  var sitstua =new Number(tempp);
+
   if ( rijio == 10 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><img src="iconcheck01.png" alt="確認中..." title="確認中..."></p>';
   } else if ( rijio == 0 ) {
@@ -69,17 +75,6 @@ function ShowTime(){
   } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 600)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
   }
-  setTimeout('ShowTime()',1500);
-}
-  </script>
-
-  <script type="text/javascript" src='sitsituation.js?v=343'></script>
-  
-  <script language="JavaScript">
-function kensaisu(){
-
-  makeRequesttt('isukazu.txt');
-  var sitstua =new Number(tempp);
 
   if ( sitstua == 1000 ) {
     document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">確認中...</span></p>';
@@ -88,10 +83,11 @@ function kensaisu(){
   } else {
     document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">空位有 : '+sitstua+' </span></p>';
   }
-
-  setTimeout('kensaisu()',2000);
+  
+  setTimeout('ShowTime()',1500);
 }
   </script>
+
 
 <body onload="ShowTime()" background="bkp03.jpg">
 <p align="center"><b><font face="微軟正黑體" style="font-size: 28pt">
