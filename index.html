@@ -26,8 +26,6 @@
   </head>
 
   <script type="text/javascript" src='rinji.js?v=343'></script>
-
-  <script type="text/javascript" src='sitsituation.js?v=343'></script>
   
   <script language="JavaScript">
 function ShowTime(){
@@ -48,9 +46,6 @@ function ShowTime(){
 //  document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
 //  document.getElementById('rijioyou').innerHTML ='Showtime = ' + rijio;
 //  alert(rijio);
-
-  makeRequesttt('isukazu.txt');
-  var sitstua =new Number(tempp);
 
   if ( rijio == 10 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><img src="iconcheck01.png" alt="確認中..." title="確認中..."></p>';
@@ -74,14 +69,6 @@ function ShowTime(){
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
   } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 600)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
-  }
-
-  if ( sitstua == 1000 ) {
-    document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">確認中...</span></p>';
-  } else if ( sitstua == 0 ) {
-    document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">空位有 : 滿桌 </span></p>';
-  } else {
-    document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">空位有 : '+sitstua+' </span></p>';
   }
   
   setTimeout('ShowTime()',1500);
