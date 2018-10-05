@@ -18,11 +18,11 @@
       makeRequesttt('isukazu.txt');
       var sitstua =new Number(tempp);
       if ( sitstua == 1000 ) {
-        document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">確認中...</span></p>';
+        document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 18pt; background-color:#FFFFFF">確認中...</span></p>';
       } else if ( sitstua == 0 ) {
-        document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">空位有 : 滿桌 </span></p>';
+        document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 18pt; background-color:#FFFFFF">空位目前有 : <font color="#FF0000">滿桌</font> </span></p>';
   } else {
-    document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">空位有 : '+sitstua+' </span></p>';
+    document.getElementById('sitcondi').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF"><span style="font-size: 18pt; background-color:#FFFFFF">空位目前有 : <font color="#FF0000">'+sitstua+'</font> 個位子 </span></p>';
   }
       setTimeout('kensaisu()',1500);
     }
