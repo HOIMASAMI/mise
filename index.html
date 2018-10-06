@@ -18,9 +18,9 @@
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="keywords" content="台中,工業區,小英咖啡店,小英的店,犁清絲路,餐廳,餐飲,飲料,restaurant,咖啡,咖啡,吃的,吃飯,休息,東海,東海大學,二校,第二校區,菜單">
+    <meta name="keywords" content="台中,工業區,小英咖啡店,小英的店,小英餐廳,小英食堂,犁清絲路,食堂,餐廳,餐飲,飲料,restaurant,咖啡,咖啡,吃的,吃飯,休息,東海,東海大學,二校,第二校區,菜單">
     <meta name="description" content="位於台中市工業區,個人,家庭可安心放鬆滿腹的餐飲店">
-    <title>小英的店 營業時間確認</title>
+    <title>小英的店 座位,營業時間,菜單確認</title>
   </head>
 
   <script type="text/javascript" src='rinji.js?v=343'></script>
@@ -61,13 +61,14 @@ function ShowTime(){
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconyoubi01.png" alt="週日休息" title="週日休息"></span></p>';
   } else if ( ((h < 10) || (h >= 19)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
-  } else if ( (( ( h*60+m ) < 1140) && ( ( h*60+m ) >= 990)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
-  } else if ( (( ( h*60+m ) < 990) && ( ( h*60+m ) >= 870)) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
-  } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 600)) ) {
+  } else if ( (( ( h*60+m ) < 1140) && ( ( h*60+m ) >= 600)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
   }
+//   else if ( (( ( h*60+m ) < 990) && ( ( h*60+m ) >= 870)) ) {
+//   document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
+//  } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 600)) ) {
+//   document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
+//}
   
   setTimeout('ShowTime()',1500);
 }
