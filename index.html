@@ -55,8 +55,10 @@ function ShowTime(){
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : 本日開店中</span></p>';
   } else if ( rijio == 3 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconfull01.png" alt="目前客滿中" title="目前客滿中"></span></p>';
-  } else if ( rijio == 4 ) {                                                // "5" 為正常營業
+  } else if ( rijio == 4 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : 臨時休業</span></p>';
+  } else if ( rijio == 5 ) {                                                // "6" 為正常營業
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
   } else if ( youbi==0 ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業狀況 : <img src="iconyoubi01.png" alt="週日休息" title="週日休息"></span></p>';
   } else if ( ((h < 10) || (h >= 19)) ) {
@@ -83,7 +85,7 @@ function ShowTime(){
 <!-- <div id="rijioyou"></div> -->
 <div align="center"><iframe src="isuha.html" width="360" height="85" frameborder="0"></iframe></div>
 <div align="center" id="eigyou"></div>
-<p align="center"><a href="zentate.html"><img src="iconzentate01.png" alt="菜單在此" title="菜單在此"></a></p>
+<p align="center"><a href="zentate.html"><img src="icon\iconzentate02.png" alt="菜單點此" title="菜單點此"></a></p>
 <p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">
 <font color="#FF0000" face="微軟正黑體"><b>NEW!!</b></font>&nbsp; </span>
 <font face="微軟正黑體">
