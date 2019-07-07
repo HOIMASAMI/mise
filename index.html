@@ -1,17 +1,158 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>小英的店 餐飲 咖啡</title>
-</head>
+  <head>
 
-<body>
-<center>
-	<p><b><span style="font-size: 35pt">目前正在搬移中，預定7月15開店</span></b></p>
-	<p><b><span style="font-size: 35pt">新地址↓</span></b></p>
-	<p><span style="font-size: 20pt"><b>電話 : 04 2631 7940</b></span></p>
-	<p><span style="font-size: 20pt"><b>住址 : 台中市龍井區新興路20巷6號</b></span></p>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2174.468945644415!2d120.58857662626868!3d24.18124526539157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346915f8b0a20905%3A0x180b6e9bc56d3892!2z6aSQ5buzIOWwj-iLseeahOW6lyDpo5_loIIg5ZKW5ZWh5bqX!5e0!3m2!1szh-TW!2stw!4v1561365342802!5m2!1szh-TW!2stw" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-</center>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122938632-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-122938632-1');
+     </script>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv='cache-control' content='no-cache, no-store, max-age=0, must-revalidatee'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="台中,臺中,龍井區,小英&#21654;&#21857;店,小英的店,小英餐廳,小英食堂,犁清絲路,食堂,餐廳,餐飲,飲料,restaurant,&#21654;&#21857;,吃的,吃飯,休息,東海,東海大學,夜市,蛋糕,菜單,小吃">
+    <meta name="description" content="位於台中市龍井區新興路,個人,家庭可安心放鬆滿腹的餐飲店">
+    <title>小英的店 營業時間,菜單確認 台中食堂 餐廳 犁清絲路</title>
+  </head>
+
+  <script type="text/javascript" src='rinji.js?v=343'></script>
+  
+  <script language="JavaScript">
+function ShowTime(){
+  
+　var d=new Date();
+  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+  var NowDate=new Date(utc + (3600000*8));
+  //時區固定為台北
+  
+　var h=NowDate.getHours();
+　var m=NowDate.getMinutes();
+//　var s=NowDate.getSeconds();
+  var youbi=NowDate.getDay();
+  makeRequest('yasumi.txt');
+  var rijio =new Number(temp);
+//　document.getElementById('showbox').innerHTML ='<p align="center">' h+'時'+m+'分'+s+'秒 </p>';
+　document.getElementById('showbox').innerHTML ='<div align="center"><span style="font-size: 11pt; background-color:#FFFFFF"><span style="font-size: 16pt; background-color:#FFFFFF">目前時間 : '+h+'時'+m+'分'+' </span></div>';
+//  document.getElementById('kyouha').innerHTML = '<br></br>今天是' + youbi ;
+//  document.getElementById('rijioyou').innerHTML ='Showtime = ' + rijio;
+//  alert(rijio);
+
+  if ( rijio == 10 ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><img src="iconcheck01.png" alt="確認中..." title="確認中..."></p>';
+  } else if ( rijio == 0 ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconempty02.png" alt="上午已售完" title="上午已售完"></span></p>';
+  } else if ( rijio == 1 ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconempty01.png" alt="本日已售完" title="本日已售完"></span></p>';
+  } else if ( rijio == 2 ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : 本日開店中</span></p>';
+  } else if ( rijio == 3 ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconfull01.png" alt="目前客滿中" title="目前客滿中"></span></p>';
+  } else if ( rijio == 4 ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : 臨時休業</span></p>';
+  } else if ( rijio == 5 ) {                                                // "6" 為正常營業
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
+  }// else if ( youbi==0 ) {
+//    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconyoubi01.png" alt="週日休息" title="週日休息"></span></p>';
+  } else if ( (( (h*60+m) < 690) || ( (h*60+m) >= 1230)) ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
+  } else if ( (( ( h*60+m ) < 1230) && ( ( h*60+m ) >= 690)) ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
+  }
+//   else if ( (( ( h*60+m ) < 990) && ( ( h*60+m ) >= 870)) ) {
+//   document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
+//  } else if ( (( ( h*60+m ) < 870) && ( ( h*60+m ) >= 600)) ) {
+//   document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
+//}
+  
+  setTimeout('ShowTime()',1500);
+}
+  </script>
+
+
+<body onload="ShowTime()" background="bkp03.jpg">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+<p align="center"><b><font face="微軟正黑體" style="font-size: 28pt">
+<span style="background-color: #FFFFFF">小英的店</span></font></b></p>
+<div align="center" id="showbox"></div>
+<!-- <div id="kyouha"></div> -->
+<!-- <div id="rijioyou"></div> -->
+<!-- <div align="center"><iframe src="isuha.html" width="360" height="85" frameborder="0"></iframe></div> -->
+<div align="center" id="eigyou"></div>
+<p align="center"><a href="zentate.html"><img src="icon\iconzentate02.png" alt="菜單點此" title="菜單點此"></a></p>
+
+<p align="center"><a href="chizu1.html"><span style="font-size: 16pt; background-color:#FFFFFF">
+<font color="#FF0000" face="微軟正黑體"><b>NEW!!</b></font>&nbsp; </span>
+<font face="微軟正黑體">
+<span style="font-size: 16pt; font-weight: 700; background-color: #FFFFFF">
+	2019/07/07 開新營業!本店已搬移完成!</span></font></a></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">
+<font color="#FF0000" face="微軟正黑體"><b>NEW!!</b></font>&nbsp; </span>
+<font face="微軟正黑體">
+<span style="font-size: 16pt; font-weight: 700; background-color: #FFFFFF">
+2019/02/07 新品上市!手工鬆餅!</span></font></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">
+<font color="#FF0000" face="微軟正黑體"><b>NEW!!</b></font>&nbsp; </span>
+<font face="微軟正黑體">
+<span style="font-size: 16pt; font-weight: 700; background-color: #FFFFFF">
+2018/12/29 新品上市!韓式泡菜&#38622;塊!</span></font></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">本店營業時間 : </span></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">早上 AM 11:30 ~ &#26202;上 PM 08:30</span></p>
+<p align="center"><font color="#FFFFFF">
+<span style="font-size: 16pt; background-color:#000000">※賣完為止</span></font></p>
+  
+
+<span style="font-size: 16pt">
+<br><br/>
+</span>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">台中市 龍井區 新興路 20 巷 6 號</span></p>
+<p align="center"><span style="font-size: 16pt; background-color: #FFFFFF">
+<a href="chizu1.html">大地圖&amp;停車場資訊</a></span></p>
+
+<p align="center">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.726067934777!2d120.58797699942187!3d24.18133796678984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346915f8b0a20905%3A0x180b6e9bc56d3892!2z5bCP6Iux55qE5bqXIOmkkOW7syDpo5_loIIg5ZKW5ZWh5bqXIOeKgea4hee1sui3rw!5e0!3m2!1szh-TW!2stw!4v1562475714821!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</p>
+<p align="center">
+<font color="#FFFFFF"><span style="background-color: #000000" lang="ja">※</span><span style="background-color: #000000">點一下地圖可縮小&#35498;明區</span></font></p>
+
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">※ 位於康是美右手邊巷弄&#20839;</span></p>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">電話(TEL) : 04-2631-7940 ; 0930-713-326</span></p>
+<br>
+<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">本店網址&amp;QR碼</span></p>
+<p align="center"><a href="https://hoimasami.github.io/mise/">
+<span style="font-size: 16pt">https://hoimasami.github.io/mise/</span></a></p>
+<p align="center">
+<img border="0" src="QRCODE.png" width="154" height="153"></p>
+
+<br><br/>
+<br><br/>
+<br><br/>
+
 </body>
+
+<!-- 
+<body>
+<div id="sonzai"></div>
+<br><br/>
+<br><br/>
+<br><br/>
+</body>
+-->
+
 </html>
