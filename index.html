@@ -59,8 +59,9 @@ function ShowTime(){
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : 臨時休業</span></p>';
   } else if ( rijio == 5 ) {                                                // "6" 為正常營業
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
-  } else if ( (youbi==2) && ( ((h*60+m)<960) || ((h*60+m)>1200) ) ) {
-    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconyoubi02.png" alt="本日上午休息" title="本日上午休息"></span></p>';
+  } 
+//  	else if ( (youbi==2) && ( ((h*60+m)<960) || ((h*60+m)>1200) ) ) {
+//    	document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconyoubi02.png" alt="本日上午休息" title="本日上午休息"></span></p>';
   }
    else if ( (( (h*60+m) < 690) || ( (h*60+m) >= 1230)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
@@ -92,7 +93,7 @@ function ShowTime(){
 <p align="center"><b><font face="微軟正黑體" style="font-size: 28pt">
 <span style="background-color: #FFFFFF">小英的店</span></font></b></p>
 <p align="center"><b><font size="6" color="#FF0000">
-<span style="background-color: #FFFFFF">[重要]本店1/24~1/27放年假(1/28有營業)</span></font></b></p>
+<span style="background-color: #FFFFFF">[重要]本店1/28有營業</span></font></b></p>
 <div align="center" id="showbox"></div>
 <!-- <div id="kyouha"></div> -->
 <!-- <div id="rijioyou"></div> -->
