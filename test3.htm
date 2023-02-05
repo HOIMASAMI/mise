@@ -4,6 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
 <title>Click the button to get your coo</title>
 </head>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<form method="POST" action="--WEBBOT-SELF--">
+	<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p><textarea id="demo" rows="17" name="S1" cols="67"></textarea></p>
+</form>
+
 <script>
 var x = document.getElementById("demo");
 function getLocation() {
@@ -39,17 +50,6 @@ function showError(error) {
   }
 }
 </script>
-<body>
-
-<p>1712</p>
-
-<button onclick="getLocation()">Try It</button>
-
-<form method="POST" action="--WEBBOT-SELF--">
-	<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
-	<p><textarea id="demo" rows="17" name="S1" cols="67"></textarea></p>
-</form>
-
 </body>
 
 </html>
