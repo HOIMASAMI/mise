@@ -7,41 +7,41 @@
 <script>
 var x = document.getElementById("demo");
 function getLocation() {
-	x.innerHTML="A";
-	x.innerHTML=x.innerHTML+"A";
+	x.value="A";
+	x.value=x.value+"A";
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
-    x.innerHTML = x.innerHTML + "Geolocation is not supported by this browser.";
+    x.value = x.value + "Geolocation is not supported by this browser.";
     showError(navigator.geolocatio);
   }
 }
 
 function showPosition(position) {
-  x.innerHTML = x.innerHTML + "Latitude: " + position.coords.latitude +
+  x.value = x.value + "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
 }
 
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-      x.innerHTML = x.innerHTML + "User denied the request for Geolocation."
+      x.value = x.value + "User denied the request for Geolocation."
       break;
     case error.POSITION_UNAVAILABLE:
-      x.innerHTML = x.innerHTML + "Location information is unavailable."
+      x.value = x.value + "Location information is unavailable."
       break;
     case error.TIMEOUT:
-      x.innerHTML = x.innerHTML + "The request to get user location timed out."
+      x.value = x.value + "The request to get user location timed out."
       break;
     case error.UNKNOWN_ERROR:
-      x.innerHTML = x.innerHTML + "An unknown error occurred."
+      x.value = x.value + "An unknown error occurred."
       break;
   }
 }
 </script>
 <body>
 
-<p>1707</p>
+<p>Click the button to get your coordinates.</p>
 
 <button onclick="getLocation()">Try It</button>
 
