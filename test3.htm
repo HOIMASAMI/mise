@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>1719</p>
+<p>1731</p>
 
 <button onclick="getLocation()">Try It</button>
 
@@ -20,7 +20,7 @@ var x = document.getElementById("demo");
 function getLocation() {
 	x.value=x.value+"A";
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
   } else {
     x.value = x.value + "Geolocation is not supported by this browser.";
     showError(navigator.geolocatio);
