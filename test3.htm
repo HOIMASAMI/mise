@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>1731</p>
+<p>1734</p>
 
 <button onclick="getLocation()">Try It</button>
 
@@ -28,6 +28,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
+	x.value = x.value + "<br>Start showPosition."
   x.value = x.value + "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
 }
