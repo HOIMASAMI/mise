@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>1740</p>
+<p>1741</p>
 
 <button onclick="getLocation()">Try It</button>
 
@@ -27,16 +27,16 @@ function showPosition(position) {
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-      x.value = x.value + "User denied the request for Geolocation."
+      x.value = x.value + "<br>User denied the request for Geolocation."
       break;
     case error.POSITION_UNAVAILABLE:
-      x.value = x.value + "Location information is unavailable."
+      x.value = x.value + "<br>Location information is unavailable."
       break;
     case error.TIMEOUT:
-      x.value = x.value + "The request to get user location timed out."
+      x.value = x.value + "<br>The request to get user location timed out."
       break;
     case error.UNKNOWN_ERROR:
-      x.value = x.value + "An unknown error occurred."
+      x.value = x.value + "<br>An unknown error occurred."
       break;
   }
 }
@@ -44,7 +44,7 @@ function showError(error) {
 function successHandler(position) {
     const { longitude, latitude } = position.coords;
     x.value = x.value + "<br>Start showPosition2."
-      x.value = x.value + "Latitude: " + latitude +
+      x.value = x.value + "<br>Latitude: " + latitude +
   "<br>Longitude: " + longitude;
   }
 
@@ -53,7 +53,7 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(successHandler,showError);
   } else {
-    x.value = x.value + "Geolocation is not supported by this browser.";
+    x.value = x.value + "<br>Geolocation is not supported by this browser.";
     showError(navigator.geolocatio);
   }
 }
