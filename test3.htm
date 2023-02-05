@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>1734</p>
+<p>1740</p>
 
 <button onclick="getLocation()">Try It</button>
 
@@ -17,15 +17,6 @@
 
 <script>
 var x = document.getElementById("demo");
-function getLocation() {
-	x.value=x.value+"A";
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition,showError);
-  } else {
-    x.value = x.value + "Geolocation is not supported by this browser.";
-    showError(navigator.geolocatio);
-  }
-}
 
 function showPosition(position) {
 	x.value = x.value + "<br>Start showPosition."
@@ -47,6 +38,23 @@ function showError(error) {
     case error.UNKNOWN_ERROR:
       x.value = x.value + "An unknown error occurred."
       break;
+  }
+}
+
+function successHandler(position) {
+    const { longitude, latitude } = position.coords;
+    x.value = x.value + "<br>Start showPosition2."
+      x.value = x.value + "Latitude: " + latitude +
+  "<br>Longitude: " + longitude;
+  }
+
+function getLocation() {
+	x.value=x.value+"A";
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(successHandler,showError);
+  } else {
+    x.value = x.value + "Geolocation is not supported by this browser.";
+    showError(navigator.geolocatio);
   }
 }
 </script>
