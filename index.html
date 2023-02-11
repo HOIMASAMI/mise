@@ -68,7 +68,9 @@ function ShowTime(){
 //   }
    else if ( (( (h*60+m) < 660) || ( (h*60+m) >= 1260)) ) {
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="icondown01.png" alt="休息準備中" title="休息準備中"></span></p>';
-  } else if ( (( ( h*60+m ) < 840) && ( ( h*60+m ) >= 660)) || ( ((h*60+m) < 1260 ) && ((h*60+m) >= 960) ) ) {
+  } else if ( (( ( h*60+m ) < 840 ) && ( ( h*60+m ) >= 660 )) ) {
+    document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
+  } else if ( (( ( h*60+m ) < 1260 ) && ( ( h*60+m ) >= 960 )) ){
     document.getElementById('eigyou').innerHTML = '<p align="center"><span style="font-size: 16pt; background-color:#FFFFFF">營業&#29376;況 : <img src="iconup01.png" alt="營業中" title="營業中"></span></p>';
   }
 //   else if ( (( ( h*60+m ) < 990) && ( ( h*60+m ) >= 870)) ) {
