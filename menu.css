@@ -5,17 +5,17 @@ nav {
   padding-top: 5px;
   box-sizing: border-box;
 }
-ul {
+nav ul {
   display: flex;
   position: absolute;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-li {
+nav ul li {
   list-style: none;
 }
-a {
+nav ul li a {
   display: block;
   text-decoration: none;
   color: white;
